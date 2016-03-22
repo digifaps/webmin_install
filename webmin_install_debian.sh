@@ -12,7 +12,7 @@ echo ':: updatings lists'
 apt-get update
 
 echo ':: installing ...'
-apt-get install webmin
+apt-get install webmin -y
 
 echo ':: done !'
 echo '--------------------------'
