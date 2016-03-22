@@ -6,13 +6,13 @@ fi
 
 echo ':: gettings key and adding repository to the sources'
 sh -c 'echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list.d/webmin.list'
-wget -O- http://www.webmin.com/jcameron-key.asc | apt-key add -
+wget -O- http://www.webmin.com/jcameron-key.asc | apt-key add -  || (echo 'Error downloading'; exit 2) 
 
 echo ':: updatings lists'
-apt-get update
+apt-get update  || (echo 'Error downloading'; exit 2) 
 
 echo ':: installing ...'
-apt-get install webmin -y
+apt-get install webmin -fy
 
 echo ':: done !'
 echo '--------------------------'
