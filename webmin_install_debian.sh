@@ -17,4 +17,4 @@ apt-get install webmin
 echo ':: done !'
 echo '--------------------------'
 echo 'go to https://<adress>:10000 in a browser and login with a user account that has sudo rights'
-
+echo 'peace, love and Linux !'
