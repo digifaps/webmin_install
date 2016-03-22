@@ -4,11 +4,11 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-echo ':: gettings key and adding repository to the sources'
+echo ':: getting key and adding repository to the sources'
 sh -c 'echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list.d/webmin.list'
 wget -O- http://www.webmin.com/jcameron-key.asc | apt-key add - || (echo 'Error downloading'; exit 2) 
 
-echo ':: updatings lists'
+echo ':: updating lists'
 apt-get update || (echo 'Error downloading'; exit 2) 
 
 echo ':: installing ...'
